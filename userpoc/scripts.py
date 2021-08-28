@@ -37,3 +37,14 @@ t1.save()
 
 # 86933b29171df09ebf66e4080a97e54f83af1f0d archit key
 # 68f45eb78dc56efc9a89495e5c5d41941a334c8d sarthak key
+# 240fcabdae8c8b5fd5ae62d87214f37e771e68db anmol key
+
+
+############ ADDING GROUPS #############
+from django.contrib.auth.models import Group
+my_group = Group.objects.create(name='SpecialOperators')
+
+
+from poc_app.models import Operator
+op_user = Operator.objects.get(user__username='archit').user
+op_user.groups.add(my_group)

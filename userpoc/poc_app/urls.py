@@ -12,7 +12,11 @@ urlpatterns = {
     path('operator/<int:operator_id>', views.OperatorViewSet.as_view(
         {
             'get': 'get_operator'
-
+        }
+    )),
+    path('tenant/', views.SpecialOperatorViewSet.as_view(
+        {
+            'post': 'add_tenant'
         }
     ))
 }

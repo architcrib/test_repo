@@ -5,7 +5,7 @@ from django.contrib.auth.models import AbstractUser
 
 
 class CribUser(AbstractUser):
-    phone_no = models.CharField(max_length=30)
+    phone_no = models.CharField(max_length=30, unique=True)
     is_tenant = models.BooleanField(default=False)
     is_partner = models.BooleanField(default=False)
     is_operator = models.BooleanField(default=False)
