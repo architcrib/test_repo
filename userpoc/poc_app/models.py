@@ -15,6 +15,7 @@ class Operator(models.Model):
     user = models.OneToOneField(CribUser, on_delete=models.CASCADE, primary_key=True)
     name = models.CharField(max_length=30)
     state = models.CharField(max_length=30)
+    roles = models.Choices('warden', 'manager', 'owner')
 
     objects = models.Manager()
 

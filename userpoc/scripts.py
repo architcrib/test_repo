@@ -1,7 +1,6 @@
 #
 
 from poc_app.models import *
-from rest_framework.authtoken.models import Token
 
 # Create Users
 user_1 = CribUser.objects.create_user('archit', 'archit@crib.in', 'pass')
